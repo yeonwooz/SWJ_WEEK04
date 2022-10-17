@@ -7,10 +7,9 @@ n,k = map(int, sys.stdin.readline().split())
 
 itemq = deque(list(map(int, sys.stdin.readline().split())))
 socketq = deque([], maxlen = n) # 0구부터 n-1구까지 사용. 사용중인 정수가 들어감 
-tempq = deque()
 cnt = 0
+tempq = deque()
 
-flag = 1
 while itemq:
     popped = itemq.popleft()
     if len(socketq) < n:
@@ -22,13 +21,20 @@ while itemq:
             # 이미 아이템이 연결되어있다면 스킵, 
             continue
         else:
-            # 새로운 아이템을 연결해야한다면 어떤 걸 빼야 할까?    
-            tempq.append(popped) # 다시 큐 맨 뒤에 저장
-    
-    temp_len = len(tempq)
-    if len(socketq) == temp_len:
-        for i in range(temp_len):
-            cnt += 1
-            socketq.popleft()
-    
+            # 새로운 아이템을 연결해야한다면 어떤 걸 빼야 할까?   
+            tempq.append(popped)
+            schedule = 1
+            while schedule <= k:
+                if not itemq: break
+                cur_pop = itemq.popleft()
+                if cur_pop in socketq: 
+                    continue
+                else:
+                    tempq.append(cur_pop)
+                    schedule += 1
+
+            while tempq:
+                socketq.append(tempq.popleft())
+                cnt += 1
+
 print(cnt)
