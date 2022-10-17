@@ -1,4 +1,62 @@
-deque([3, 2, 3, 1, 2, 7]) deque([], maxlen=2) deque([]) 0
-deque([2, 3, 1, 2, 7]) deque([2], maxlen=2) deque([]) 0
-deque([2, 7]) deque([2, 3], maxlen=2) deque([]) 0
-2
+tempq deque([25, 52, 77]) 25 52
+socketq deque([56, 71, 70], maxlen=3) cnt 3
+tempq deque([76, 8, 68]) 76 8
+socketq deque([25, 52, 77], maxlen=3) cnt 6
+tempq deque([71, 51, 65]) 71 51
+socketq deque([76, 8, 68], maxlen=3) cnt 9
+tempq deque([13, 23, 7]) 13 23
+socketq deque([71, 51, 65], maxlen=3) cnt 12
+tempq deque([16, 19, 54]) 16 19
+socketq deque([13, 23, 7], maxlen=3) cnt 15
+tempq deque([95, 18, 86]) 95 18
+socketq deque([16, 19, 54], maxlen=3) cnt 18
+tempq deque([74, 29, 76]) 74 29
+socketq deque([95, 18, 86], maxlen=3) cnt 21
+tempq deque([61, 93, 44]) 61 93
+socketq deque([74, 29, 76], maxlen=3) cnt 24
+tempq deque([96, 32, 72]) 96 32
+socketq deque([61, 93, 44], maxlen=3) cnt 27
+tempq deque([64, 19, 50]) 64 19
+socketq deque([96, 32, 72], maxlen=3) cnt 30
+tempq deque([49, 22, 14]) 49 22
+socketq deque([64, 19, 50], maxlen=3) cnt 33
+tempq deque([7, 64, 24]) 7 64
+socketq deque([49, 22, 14], maxlen=3) cnt 36
+tempq deque([83, 6, 3]) 83 6
+socketq deque([7, 64, 24], maxlen=3) cnt 39
+tempq deque([2, 76, 99]) 2 76
+socketq deque([83, 6, 3], maxlen=3) cnt 42
+tempq deque([7, 76, 100]) 7 76
+socketq deque([2, 76, 99], maxlen=3) cnt 44
+tempq deque([60, 6, 50]) 60 6
+socketq deque([7, 76, 100], maxlen=3) cnt 47
+tempq deque([90, 49, 27]) 90 49
+socketq deque([60, 6, 50], maxlen=3) cnt 50
+tempq deque([51, 37, 61]) 51 37
+socketq deque([90, 49, 27], maxlen=3) cnt 53
+tempq deque([16, 84, 89]) 16 84
+socketq deque([51, 37, 61], maxlen=3) cnt 56
+tempq deque([51, 73, 28]) 51 73
+socketq deque([16, 84, 89], maxlen=3) cnt 59
+tempq deque([90, 77, 73]) 90 77
+socketq deque([51, 73, 28], maxlen=3) cnt 61
+tempq deque([39, 78, 96]) 39 78
+socketq deque([90, 77, 73], maxlen=3) cnt 64
+tempq deque([13, 92, 54]) 13 92
+socketq deque([39, 78, 96], maxlen=3) cnt 67
+tempq deque([70, 69, 62]) 70 69
+socketq deque([13, 92, 54], maxlen=3) cnt 70
+tempq deque([78, 7, 75]) 78 7
+socketq deque([70, 69, 62], maxlen=3) cnt 73
+tempq deque([30, 67, 97]) 30 67
+socketq deque([78, 7, 75], maxlen=3) cnt 76
+tempq deque([98, 19, 86]) 98 19
+socketq deque([30, 67, 97], maxlen=3) cnt 79
+tempq deque([90, 2, 39]) 90 2
+socketq deque([98, 19, 86], maxlen=3) cnt 82
+tempq deque([41, 58, 57]) 41 58
+socketq deque([90, 2, 39], maxlen=3) cnt 85
+tempq deque([84, 19, 8]) 84 19
+socketq deque([41, 58, 57], maxlen=3) cnt 88
+tempq deque([52, 39, 26]) 52 39
+socketq deque([84, 19, 8], maxlen=3) cnt 91
