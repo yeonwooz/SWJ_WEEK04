@@ -1,0 +1,4 @@
+deque([3, 2, 3, 1, 2, 7]) deque([], maxlen=2) deque([]) 0
+deque([2, 3, 1, 2, 7]) deque([2], maxlen=2) deque([]) 0
+deque([2, 7]) deque([2, 3], maxlen=2) deque([]) 0
+2

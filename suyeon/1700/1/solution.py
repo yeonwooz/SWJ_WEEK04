@@ -16,6 +16,7 @@ while itemq:
         # 이미 아이템이 소켓에 연결되어있다면 스킵, 
         continue
     else:
+        # print(itemq, socketq, tempq, cnt)
         # 아이템을 새로 꽂아야한다 
         if len(socketq) < n:
             # 빈소켓 존재
@@ -38,7 +39,19 @@ while itemq:
 
             while tempq:
                 #tempq에 있는 것들을 소켓에 꽂는다.
-                cur_pop = tempq.popleft()
-                socketq.append(cur_pop)
-                cnt += 1
+                popped = tempq.popleft()
+                if popped not in socketq:
+                    socketq.append(popped)
+                    cnt += 1
 print(cnt)
+
+'''
+2 8
+1 2 3 4 3 4 2 2
+
+=> 1,2,3,4 에서 3,4만 보고 1,2를 빼버리면 안되고, 그 뒤(3,4,2,2)까지 미리 봐야 한다.
+
+1 2 충전
+3 4 충전 (cnt += 2)
+3이나 4 를 빼고 2 충전 (cnt += 1)
+'''
