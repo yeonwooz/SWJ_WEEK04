@@ -24,7 +24,7 @@ for diff in range(len1):
     for i in range(1, len2):
         j = i + diff
         if  i > len1 or j > len2: continue
-        if i < len2 and j < len1 and str2[i-1] == str1[j-1]:
+        if i <= len2 and j <= len1 and str2[i-1] == str1[j-1]:
             cnt += 1
             lcs += str1[j-1]
         else:
@@ -37,8 +37,7 @@ for diff in range(len1):
     if cnt > max_cnt:
         max_cnt = cnt
         max_lcs = lcs    
-
-print(str1, str2, len1, len2)         
+       
 # # # 대각선 기준 아래 영역
 for diff in range(len2):   
     cnt = 0
@@ -46,8 +45,7 @@ for diff in range(len2):
     for j in range(1, len1):
         i = j + diff
         if i > len2 or j > len1: continue
-        print(i,j)
-        if i < len2 and j < len1 and str2[i-1] == str1[j-1]:
+        if i <= len2 and j <= len1 and str2[i-1] == str1[j-1]:
             cnt += 1
             lcs += str1[j-1]
         else:
@@ -63,4 +61,4 @@ for diff in range(len2):
 
 print(max_cnt)
 print(max_lcs)
-
+#finished at 3:18 => 메모리 초과
