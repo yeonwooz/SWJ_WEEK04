@@ -16,6 +16,7 @@ for i in range(1, len2+1):
 
 max_cnt = 0
 max_lcs = ''
+
 # # 대각선 기준 위영역
 for diff in range(len1):
     cnt = 0
@@ -23,35 +24,38 @@ for diff in range(len1):
     for i in range(1, len2):
         j = i + diff
         if j >= len2: continue
-        if DP[i][j] == DP[i-1][j-1] + 1:
-          cnt += 1
-          lcs += str1[j-1]
+        if i < len2 and j < len1 and str2[i-1] == str1[j-1]:
+            cnt += 1
+            lcs += str1[j-1]
         else:
-            cnt = 1
-            lcs = str1[j-1]
+            if cnt > max_cnt:
+                max_cnt = cnt
+                max_lcs = lcs    
+            cnt = 0
+            lcs = ''
+
     if cnt > max_cnt:
-       max_cnt = cnt
-       max_lcs = lcs 
-
-
-# def check_upper      
+        max_cnt = cnt
+        max_lcs = lcs    
              
-# # 대각선 기준 아래 영역
+# # # 대각선 기준 아래 영역
 # for diff in range(len2):   
 #     cnt = 0
 #     lcs = ''
-#     for i in range(1, len):
-#         j = i + diff
-#         if j >= len2: continue
-#         if DP[i][j] == DP[i-1][j-1] + 1:
-#           cnt += 1
-#           lcs += str1[j-1]
-#         else:
-#             cnt = 1
-#             lcs = str1[j-1]
-#     if cnt > max_cnt:
-#        max_cnt = cnt
-#        max_lcs = lcs 
+#     for j in range(1, len1):
+#         i = j + diff
+        # print(i,j)
+
+    #     if j >= len2: continue
+    #     if DP[i][j] == DP[i-1][j-1] + 1:
+    #       cnt += 1
+    #       lcs += str1[j-1]
+    #     else:
+    #         cnt = 1
+    #         lcs = str1[j-1]
+    # if cnt > max_cnt:
+    #    max_cnt = cnt
+    #    max_lcs = lcs 
 
 
 print(max_cnt)
